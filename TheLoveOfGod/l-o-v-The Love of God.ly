@@ -1,8 +1,8 @@
 \version "2.21.0"
 % automatically converted by musicxml2ly from /work/colin/music/MPS/TheLoveOfGod/l-o-v-The Love of God.xml
-\pointAndClickOff
+%\pointAndClickOff
 
-\include "articulate.ly"
+%\include "articulate.ly"
 
 %% additional definitions required by the score:
 \language "english"
@@ -244,7 +244,7 @@ PartPTwoVoiceTwoLyricsOne =  \lyricmode {
   \layout {}
 }
 \score {
-  \unfoldRepeats \articulate {
+  \unfoldRepeats  {
 
     \new Staff
     <<
