@@ -158,7 +158,7 @@ rehearsalMidi = #
      \context Staff = $name {
        \set Score.midiMinimumVolume = #0.5
        \set Score.midiMaximumVolume = #0.6
-       \set Score.tempoWholesPerMinute = #(ly:make-moment 100 4)
+       \set Score.tempoWholesPerMinute = #(ly:make-moment 88 4)
        \set Staff.midiMinimumVolume = #0.8
        \set Staff.midiMaximumVolume = #1.0
        \set Staff.midiInstrument = $midiInstrument
@@ -209,7 +209,7 @@ rehearsalMidi = #
   }
     }
   \midi {
-    \tempo 4=100
+    \tempo 4=88
   }
 }
 

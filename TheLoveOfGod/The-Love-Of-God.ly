@@ -1,19 +1,16 @@
 \version "2.21.0"
 \language "english"
 
-\pointAndClickOff
-
 \header {
-  title = "Blessed Assurance"
-  composer = "Phoebe L. Knapp, 1873"
-  poet = "Frances J. Crosby, 1873"
+  title = "The Love Of God"
+  composer = "Frederick M. Lehman, 1917"
+  poet = "F.M.L. 1917"
+  arranger = "Claudia L. Mays"
   tagline = ""
 }
 
 \paper {
   #(set-paper-size "letter")
-  ragged-last-bottom = ##f
-  systems-per-page = #4
 }
 
 \layout {
@@ -25,91 +22,131 @@
 }
 
 global = {
-  \key d \major
-  \time 9/8
+  \key ef \major
+  \time 3/4
   \partial 4.
 }
 
-bb= { \bar "" \break }
 tenor = \relative c' {
   \global
-  \partial 8*3
-  a8 g fs a4. a  b8 fs g |
-  fs2. a8 a a |
-  a4. a4 a8 d cs b |
-  cs2. \bb
-  a8 g fs a4. a b8 fs g fs2. fs8 g a b4. g fs8 g e fs2. \bar "||" \break
+  g8 g af bf4. ef8 ef ef ef4 ( bf8 ) g g bf bf4. bf8 bf bf bf4.
+  g8 g af bf4. ef8 ef ef ef4 ( bf8 ) g g bf bf4. bf8 bf af g4.
+  g8 af bf c4. c8 c af g4 ( bf8 ) g g g bf2 bf4 bf4.
+  g8 af bf c4. c8 c af g4 ( bf8 ) g g g f4 ( af ) bf g4.
   % refrain
-  \partial 4. d'8 d d a4. d d8 d d d2. d8 d d d4. d e8 e e  |
-  e2. \bb
-  a,8 b cs d4.d d8 d d d2. a8 a a b4. g fs8. g16 e8 fs2.
+  \repeat volta 2 {
+    g8 af bf c4. c8 bf af g4 ( bf8 ) g g af b2
+  }
+  \alternative {
+    { af4 g4. }
+    {bf4 g4.}
+  }
   \bar "|."
-
-
 }
+
 
 lead = \relative c {
   \global
-  fs8 e d a'4. a g8 a b a2. a8 fs a d4. cs4 cs8 b a gs a2. fs8 e d  |
-  a'4. a g8 a b a2. d,8 e fs g4. e d8 e cs d2.
+  ef8 ef f g4. bf8 c bf bf4  ( g8 ) bf bf g f4. af8 g f  g4.
+  ef8 ef f g4. bf8 c bf bf4 ( g8 ) bf bf g f4. af8 g f ef4.
+  ef'8 ef ef c4. ef8 ef ef bf4 ( g8 ) bf8 bf c bf4 ( f ) af g4.
+  ef'8 ef ef c4. ef8 ef ef bf4 ( g8 ) bf8 bf c bf4 ( f ) g ef4.
   % refrain
-  a'8 a a d4. a b8 b b a2. a8 a a b4. d cs8 cs b cs2.
-  cs8 d e d4. a b8 a b a2. d,8 e fs g4. e d8. e16 cs8 d2.
+  \repeat volta 2 {
+    ef'8 ef ef ef4. ef8 d c bf4 ( g8 ) bf bf c bf4 ( f )
+  }
+  \alternative {
+    {c'4 bf4. }
+    {g4 ef4. }
 
+  }
+  \bar "|."
 }
 
 baritone = \relative c {
   \global
-  d8 d d fs4. fs d8 d d d2. fs8 d fs fs4. e4 e8 e e e e2. \bb
-  d8 d d fs4. fs d8 d d d2. d8 d d d4. b d8 cs a a2.
+  bf8 bf bf ef4. g8 af g g4 ( ef8 ) ef ef ef d4. f8 ef d ef4.
+  bf8 bf bf ef4. g8 af g g4 ( ef8 ) ef ef ef d4. f8 ef d ef4.
+  ef8 ef ef ef4. ef8 ef ef ef4. ef8 ef ef d2 f4 ef4.
+  ef8 ef ef ef4. ef8 ef ef ef4. ef8 ef ef d2 d4 ef4.
   % refrain
-  fs'8 fs fs fs4. fs g8 g g fs2. fs8 fs fs g4. a a8 a gs a2. \bb
-  g8 g g fs4. fs g8 fs g fs2. d8 d d d4. b d8. cs16 a8 a2.
+  \repeat volta 2 {
+    ef8 ef ef ef4. ef8 ef ef ef4. ef8 ef ef d2
+  }
+  \alternative {
+    {d4 ef4. }
+    { d4 ef4. }
+  }
 }
 
 bass = \relative c {
   \global
-  d8 d d d4. d d8 d d d2. d8 d d d4. e4 e8 e e e a,2.
-  d8 d d d4. d d8 d d d2. d8 d d g,4. g a8 a a d2.
-  % refrian
-  d8 d d d4. d g8 g g d2. d8 d d g4. g e8 e e a2.
-  a8 a a d,4. d d8 d d d2. fs8 e d g,4. g a8. a16 a8 d2.
+  ef8 ef ef ef4. ef8 ef ef ef4. ef8 ef ef bf4. bf8 bf bf ef4.
+  ef8 ef ef ef4. ef8 ef ef ef4. ef8 ef ef bf4. bf8 bf bf ef4.
+  ef8 f g af4. af8 af, c ef4. ef8 ef ef f2 d4 ef4.
+  ef8 f g af4. af8 af, c ef4. ef8 ef ef bf2 bf4 ef4.
+  % refrain
+  \repeat volta 2 {
+    ef8 f g af4. af8 af af ef4. ef8 ef ef f4 ( bf )
+  }
+  \alternative {
+    {bf,4 ef4. }
+    {bf4 ef4. }
+  }
+
+
 }
 
 verseOne = \lyricmode {
   \set stanza = "1."
-  Bless -- èd as -- sur -- ance, Je -- sus is mine!
-  O what a fore -- taste of glo -- ry di -- vine!
-  Heir of sal -- va -- tion, pur -- chase of God,
-  Born of His Spir -- it, washed in His blood.
-
+  The love of God is great -- er far
+Than tongue or pen can ev -- er tell;
+It goes bey -- ond the high -- est star,
+And reach -- es to the low -- est hell;
+The guilt -- y pair, bowed down with care,
+God gave His Son to win;
+His er -- ring child He re -- con -- ciled,
+And par -- doned from his sin.
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2."
-  Per -- fect sub -- mis -- sion, per -- fect de -- light,
-  Vis -- ions of rap -- ture now burst on my sight;
-  An -- gels des -- cend -- ing bring from a -- bove
-  Ech -- oes of mer -- cy, whis -- pers of love.
-
+ When hoar -- y time shall pass a -- way,
+And earth -- ly thrones and king -- doms fall,
+When men who here re -- fuse to pray,
+On rocks and hills and moun -- tains call,
+God’s love so sure, shall still en -- dure,
+All meas -- ure -- less and strong;
+Re -- deem -- ing grace to Ad -- am’s race—
+The saints’ and an -- gels’ song.
 }
 
 verseThree = \lyricmode {
   \set stanza = "3."
-  Per -- fect sub -- mis -- sion, all is at rest
-  I in my Sa -- vior am hap -- py and blest,
-  Watch -- ing and wait -- ing, look -- ing a -- bove,
-  Filled with His good -- ness, lost in His love.
+ Could we with ink the o -- cean fill,
+And were the skies of parch -- ment made,
+Were ev -- ery stalk on earth a quill,
+And ev -- ery man a scribe by trade;
+To write the love of God a -- bove
+Would drain the o -- cean dry;
+Nor could the scroll con -- tain the whole,
+Though stretched from sky to sky.
 
 }
 
 refrain = \lyricmode {
-  This is my sto -- ry, this is my song,
-  Prais -- ing my Sa -- vior, all the day long;
-  This is my sto -- ry, this is my song,
-  Prais -- ing my Sa -- vior, all the day long.
-}
+  <<
+    {
+  Oh, love of God, how rich and pure!
+How meas -- ure -- less and strong! }
+    \new Lyrics {
+    \set associatedVoice = "tenor1"
 
+It shall for ev -- er -- more en -- dure—
+The saints’ and an -- gels’ song.
+}
+  >>
+  }
 rehearsalMidi = #
 (define-music-function
  (parser location name midiInstrument lyrics) (string? string? ly:music?)
@@ -138,7 +175,6 @@ rehearsalMidi = #
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { "Tenor" "Lead" }
-      %     shortInstrumentName = \markup \center-column { "Ten" "Lead" }
     } <<
       \clef "treble_8"
       \new Voice = "tenor1" { \voiceOne \tenor }
@@ -147,10 +183,10 @@ rehearsalMidi = #
     \new Lyrics  \lyricsto "tenor1" \verseOne
     \new Lyrics  \lyricsto "tenor1" { \verseTwo \refrain }
     \new Lyrics  \lyricsto "tenor1" \verseThree
+
     \new Staff \with {
       midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { "Baritone" "Bass" }
-      %     shortInstrumentName = \markup \center-column { "Bar" "Bass" }
     } <<
       \clef bass
       \new Voice = "bass1" { \voiceOne \baritone }
