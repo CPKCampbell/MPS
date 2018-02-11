@@ -10,6 +10,9 @@
 
 \paper {
   #(set-paper-size "letter")
+  ragged-bottom = ##f
+  ragged-last-bottom = ##f
+  system-count = #4
 }
 
 \layout {
@@ -18,6 +21,11 @@
     \consists "Melody_engraver"
     \override Stem #'neutral-direction = #'()
   }
+   \context {
+      \Lyrics
+      \override VerticalAxisGroup.staff-affinity = #CENTER
+      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #3
+    }
 }
 
 global = {
@@ -29,22 +37,12 @@ global = {
 tenor = \relative c' {
   \global
   \repeat volta 5 {
-    %{
- g4 g g g g8. g16 bf2 g4 bf |
- bf4 bf8. bf16 bf4 bf bf2. g4 af af c bf8. af16 |
- g2 bf4 c bf bf8. bf16 af4 af g2. f4\rest \bar "||" \break
- % refrain
- bf4 bf bf8. af16 g4 bf4 bf bf8. bf16 bf4 bf bf bf4. bf8 bf4 bf bf2 |
- bf4 bf bf8. af16 g4 bf4 bf bf8. bf16 bf4 c c bf4. bf8 bf4 af g\fermata |
-
-    %}
-% stash
-ef4 ef bf ef ef8. ef16 ef2 ef4 ef |
-  f4 f8. f16 g4 af g2. ef4 ef ef ef ef8. ef16 ef2 ef4 ef |
-  ef4 ef8. ef16 d4 d ef2. af,4\rest \bar "||" \break
-  % refrain
-  ef'4 ef ef8. ef16 ef4 g g g8. f16 ef4 d d d4. ef8 f4 ef d2
-  ef4 ef ef8. ef16 ef4 g g g8. f16 ef4 ef ef ef4. af8 g4 f ef\fermata
+   f,4 g g g g8. af16 bf2 g4 bf bf bf8. bf16 bf4 bf bf2.
+   g4 af af c bf8. af16 g2 bf4 c bf bf8. bf16 af4 af g1 |
+   \bar "||"
+   % refrain
+   bf4 bf bf8. af16 g4 ef ef bf'8. bf16 bf4 bf bf bf4. bf8 bf4 bf bf2 |
+   bf4 bf bf8. af16 g4 ef ef bf'8. bf16 bf4 c bf bf4. bf8 bf4 af g
 }
    \bar "|."
 }
@@ -61,25 +59,17 @@ lead = \relative c {
   }
 }
 
-baritone = \relative c' {
+baritone = \relative c {
   \global
   \repeat volta 5 {
- g4 g g g g8. g16 bf2 g4 bf |
- bf4 bf8. bf16 bf4 bf bf2. g4 af af c bf8. af16 |
- g2 bf4 c bf bf8. bf16 af4 af g2. f4\rest \bar "||" \break
+ d4 ef bf ef ef8. ef16 ef2 ef4 ef f f8. f16 g4 af g2.
+ ef4 ef ef ef ef8. ef16 ef2 ef4 ef ef ef8. ef16 d4 d ef1
+ \bar "||"
  % refrain
- bf4 bf bf8. af16 g4 bf4 bf bf8. bf16 bf4 bf bf bf4. bf8 bf4 bf bf2 |
- bf4 bf bf8. af16 g4 bf4 bf bf8. bf16 bf4 c c bf4. bf8 bf4 af g\fermata |
+ ef4 ef ef8. ef16 ef4 g g g8. f16 ef4 d d d4. ef8 f4 ef d2 |
+ ef4 ef ef8. ef16 ef4 g4 g g8. f16 ef4 ef ef ef4. af8 g4 f ef
   }
-    %{
-  ef4 ef bf ef ef8. ef16 ef2 ef4 ef |
-  f4 f8. f16 g4 af g2. ef4 ef ef ef ef8. ef16 ef2 ef4 ef |
-  ef4 ef8. ef16 d4 d ef2. af,4\rest \bar "||" \break
-  % refrain
-  ef'4 ef ef8. ef16 ef4 g g g8. f16 ef4 d d d4. ef8 f4 ef d2
-  ef4 ef ef8. ef16 ef4 g g g8. f16 ef4 ef ef ef4. af8 g4 f ef\fermata
-  }
-    %}
+
  \bar "|."
 }
 
@@ -90,8 +80,8 @@ bass = \relative c, {
   bf4 bf8. bf16 bf4 bf ef,2. ef4 |
   af4 af af af8. af16 ef2 g4 af bf bf8. bf16 bf4 bf ef,2. s4 |
   %refrain
-  ef4 ef ef8. ef16 ef4 ef' ef ef8. ef16 ef4 bf bf bf4. bf8 bf4 bf bf2
-  ef,4 ef ef8. ef16 ef4 ef' ef ef8. ef16 ef4 af,4 af bf4. bf8 bf4 bf ef,
+  ef4 ef ef8. ef16 ef4 bf' bf ef8. ef16 ef4 bf bf bf4. bf8 bf4 bf bf2
+  ef,4 ef ef8. ef16 ef4 bf' bf ef8. ef16 ef4 af,4 af bf4. bf8 bf4 bf ef,
   }
 }
 
