@@ -1,7 +1,7 @@
 \version "2.21.0"
 \language "english"
 
-\pointAndClickOff
+%\pointAndClickOff
 
 \header {
   title = "Blessed Assurance"

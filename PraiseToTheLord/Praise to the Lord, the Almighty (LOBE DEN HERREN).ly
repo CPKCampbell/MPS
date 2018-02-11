@@ -163,7 +163,7 @@ verseOne = \lyricmode {
 
 verseTwo = \lyricmode {
   \set stanza = "2."
-   \set stanza = "2."
+   
   Praise to the Lord! who o'er all things so won -- drous -- ly reign -- eth,
   Shel -- ters thee un -- der His wings, yea so gent -- ly sus -- tain -- eth;
   Hast thou not seen
