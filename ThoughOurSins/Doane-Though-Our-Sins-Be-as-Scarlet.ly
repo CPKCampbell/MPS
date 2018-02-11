@@ -36,7 +36,7 @@ tenor = \relative c' {
   c8. c16 c2 \tuplet 3/2 {af8 (bf) c } df4 c c8. c16 bf8. c16 bf4 df c2
 c8. c16 c2 \tuplet 3/2 {af8 (bf) c } df4 c c8. c16 bf8. c16 bf4 df c2
 \tuplet 3/2 { g8 af g } g2~ \tuplet 3/2 {g4 g8 } af4 af af8 bf c2 bf4 af2\fermata  \bar "||"
-df8. df16 c2 \tuplet 3/2 { af8 bf c } df4 c af8. af16 af2 \tuplet 3/2 { af4 af8 }
+df8. df16 c2 \tuplet 3/2 { af8 (bf) c } df4 c af8. af16 af2 \tuplet 3/2 { af4 af8 }
 af4 af af8 af af4. af8 af8.  af16 af2 af8 af g4. af8 bf8. g16 af2
 \bar "|."
 }
@@ -51,7 +51,7 @@ lead = \relative c {
    f4  ef  ef8.  af16 | % 8
    g8.  af16  g4  bf | % 9
    af2 \times 2/3 { ef8 f ef  }   |
-   bf'2 ~ \times 2/3 { bf8  c bf  }  | % 11
+   bf'2 ~ \times 2/3 { bf8  (c) bf  }  | % 11
    af4 af af8  bf | % 12
    c2  c,4 | % 13
     f2\fermata \bar "||"
@@ -76,7 +76,7 @@ baritone = \relative c {
    f4  ef  ef8.  af16 | % 8
    g8.  af16  g4  bf | % 9
    af2 \times 2/3 { df,8 ef df  }   |
-  df2 ~ \times 2/3 { df8 ef df  }  | % 11
+  df2 ~ \times 2/3 { df8 (ef) df  }  | % 11
    c4 c af'8  bf | % 12
    c2  c,4 | % 13
     c2\fermata  ef8.  ef16 | % 14
@@ -108,7 +108,7 @@ verseOne = \lyricmode {
 they shall be as white as snow;
 though our sins be as scar -- let,
 they shall be as white as snow.
-Though they be red _  like crim -- son,
+Though they be red   like crim -- son,
 They shall be as wool.
 Though our sins be as scar -- let,
 though our sins be as scar -- let,
@@ -123,7 +123,7 @@ verseTwo = \lyricmode {
 O re -- turn ye un -- to God!
 Hear the voice that en -- treats you,
 O re -- turn ye un -- to God!
-He is of great _ com -- pas -- sion,
+He is of great com -- pas -- sion,
 and of won -- drous love.
 Hear the voice that en -- treats you,
 hear the voice that en -- treats you,
@@ -137,13 +137,17 @@ verseThree = \lyricmode {
 and re -- mem -- ber them no more:
 he'll for -- give your trans -- gres -- sions,
 and re -- mem -- ber them no more.
-“Look un -- to me, _ ye peo -- ple,”
+“Look un -- to me,  ye peo -- ple,”
 saith the Lord your God.
 He'll for -- give your trans -- gres -- sions,
 he'll for -- give your trans -- gres -- sions,
 and re -- mem -- ber them no more,
 and re -- mem -- ber them no more.
+}
 
+bassVerseOne = \lyricmode {
+  \repeat unfold 28 { \skip 1 }
+Though they be red Though they be red
 }
 
 rehearsalMidi = #
@@ -194,6 +198,7 @@ rehearsalMidi = #
       \new Voice = "bass1" { \voiceOne \tenor }
       \new Voice = "bass2" { \voiceTwo \bass }
     >>
+    \new Lyrics \lyricsto "bass2" \bassVerseOne
   >>
   \layout {
   \context {
