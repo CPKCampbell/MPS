@@ -29,7 +29,7 @@
 }
 
 global = {
-  \key ef \major
+  \key g \major
   \time 4/4
   \partial 4
 }
@@ -37,12 +37,12 @@ global = {
 tenor = \relative c' {
   \global
   \repeat volta 5 {
-   f,4 g g g g8. af16 bf2 g4 bf bf bf8. bf16 bf4 bf bf2.
-   g4 af af c bf8. af16 g2 bf4 c bf bf8. bf16 af4 af g1 |
+   a4 b b b b8. c16 d2 b4 d d d8. d16 d4 d d2.
+   b4 c c e d8. c16 b2 d4 e d d8. d16 c4 c b1 |
    \bar "||"
    % refrain
-   bf4 bf bf8. af16 g4 ef ef bf'8. bf16 bf4 bf bf bf4. bf8 bf4 bf bf2 |
-   bf4 bf bf8. af16 g4 ef ef bf'8. bf16 bf4 c bf bf4. bf8 bf4 af g
+   d4 d d8. c16 b4 g g d'8. d16 d4 d d d4. d8 d4 d d2 |
+   d4 d d8. c16 b4 g g d'8. d16 d4 e d d4. d8 d4 c b
 }
    \bar "|."
 }
@@ -50,38 +50,38 @@ tenor = \relative c' {
 lead = \relative c {
   \global
   \repeat volta 5 {
-  bf4 bf g bf ef8. f16 g2 ef4 ef |
-  d4 d8. 16 ef4 f ef2. bf4 c c ef d8. c16 bf2 ef4 f |
-  g4 g8. g16 f4 f ef2. s4 |
+  d4 d b d g8. a16 b2 g4 g |
+  fs4 fs8. 16 g4 a g2. d4 e e g fs8. e16 d2 g4 a |
+  b4 b8. b16 a4 a g2. s4 |
   % refrain
-  g2 g8. f16 ef4 bf'2 bf8. af16 g4 f f f4. g8 af4 g f2 |
-  g2 g8. f16 ef4 bf'2 bf8. af16 g4 f g8 af g4. f8 ef4 d ef
+  b2 b8. a16 g4 d'2 d8. c16 b4 a a a4. b8 c4 b a2 |
+  b2 b8. a16 g4 d'2 d8. c16 b4 a b8 c b4. a8 g4 fs g
   }
 }
 
 baritone = \relative c {
   \global
   \repeat volta 5 {
- d4 ef bf ef ef8. ef16 ef2 ef4 ef f f8. f16 g4 af g2.
- ef4 ef ef ef ef8. ef16 ef2 ef4 ef ef ef8. ef16 d4 d ef1
+ fs4 g d g g8. g16 g2 g4 g a a8. a16 b4 c b2.
+ g4 g g g g8. g16 g2 g4 g g g8. g16 fs4 fs g1
  \bar "||"
  % refrain
- ef4 ef ef8. ef16 ef4 g g g8. f16 ef4 d d d4. ef8 f4 ef d2 |
- ef4 ef ef8. ef16 ef4 g4 g g8. f16 ef4 ef ef ef4. af8 g4 f ef
+ g4 g g8. g16 g4 b b b8. a16 g4 fs fs fs4. g8 a4 g fs2 |
+ g4 g g8. g16 g4 b4 b b8. a16 g4 g g g4. c8 b4 a g
   }
 
  \bar "|."
 }
 
-bass = \relative c, {
+bass = \relative c {
   \global
   \repeat volta 5 {
-  ef4 ef ef ef ef8. ef16 ef2 ef4 g |
-  bf4 bf8. bf16 bf4 bf ef,2. ef4 |
-  af4 af af af8. af16 ef2 g4 af bf bf8. bf16 bf4 bf ef,2. s4 |
+  g4 g g g g8. g16 g2 g4 b |
+  d4 d8. d16 d4 d g,2. g4 |
+  c4 c c c8. c16 g2 b4 c d d8. d16 d4 d g,2. s4 |
   %refrain
-  ef4 ef ef8. ef16 ef4 bf' bf ef8. ef16 ef4 bf bf bf4. bf8 bf4 bf bf2
-  ef,4 ef ef8. ef16 ef4 bf' bf ef8. ef16 ef4 af,4 af bf4. bf8 bf4 bf ef,
+  g4 g g8. g16 g4 d' d g8. g16 g4 d d d4. d8 d4 d d2
+  g,4 g g8. g16 g4 d' d g8. g16 g4 c,4 c d4. d8 d4 d g,
   }
 }
 

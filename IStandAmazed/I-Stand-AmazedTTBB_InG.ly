@@ -21,11 +21,6 @@
     \consists "Melody_engraver"
     \override Stem #'neutral-direction = #'()
   }
-   \context {
-      \Lyrics
-      \override VerticalAxisGroup.staff-affinity = #CENTER
-      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #3
-    }
 }
 
 global = {
@@ -38,12 +33,13 @@ tenor = \relative c' {
   \global
   \repeat volta 5 {
    a4 b b b b8. c16 d2 b4 d d d8. d16 d4 d d2.
-   b4 c c e d8. c16 b2 d4 e d d8. d16 c4 c b1 |
+   b4 c c e d8. c16 b2 d4 e d d8. d16 c4 c b2. r4
    \bar "||"
+
    % refrain
-   d4 d d8. c16 b4 g g d'8. d16 d4 d d d4. d8 d4 d d2 |
+   d4 d d8. c16 b4 g g d'8. d16 d4 d d d4. d8 d4 d d2
    d4 d d8. c16 b4 g g d'8. d16 d4 e d d4. d8 d4 c b
-}
+  }
    \bar "|."
 }
 
@@ -52,9 +48,10 @@ lead = \relative c {
   \repeat volta 5 {
   d4 d b d g8. a16 b2 g4 g |
   fs4 fs8. 16 g4 a g2. d4 e e g fs8. e16 d2 g4 a |
-  b4 b8. b16 a4 a g2. s4 |
+  b4 b8. b16 a4 a g2. r4
+
   % refrain
-  b2 b8. a16 g4 d'2 d8. c16 b4 a a a4. b8 c4 b a2 |
+  b2 b8. a16 g4 d'2 d8. c16 b4 a a a4. b8 c4 b a2
   b2 b8. a16 g4 d'2 d8. c16 b4 a b8 c b4. a8 g4 fs g
   }
 }
@@ -63,25 +60,25 @@ baritone = \relative c {
   \global
   \repeat volta 5 {
  fs4 g d g g8. g16 g2 g4 g a a8. a16 b4 c b2.
- g4 g g g g8. g16 g2 g4 g g g8. g16 fs4 fs g1
+ g4 g g g g8. g16 g2 g4 g g g8. g16 fs4 fs g2. r4
  \bar "||"
+
  % refrain
- g4 g g8. g16 g4 b b b8. a16 g4 fs fs fs4. g8 a4 g fs2 |
+ g4 g g8. g16 g4 b b b8. a16 g4 fs fs fs4. g8 a4 g fs2
  g4 g g8. g16 g4 b4 b b8. a16 g4 g g g4. c8 b4 a g
-  }
-
- \bar "|."
+  \bar "|."
 }
-
+}
 bass = \relative c {
   \global
   \repeat volta 5 {
-  g4 g g g g8. g16 g2 g4 b |
+  d4 g, g g g8. g16 g2 g4 b |
   d4 d8. d16 d4 d g,2. g4 |
-  c4 c c c8. c16 g2 b4 c d d8. d16 d4 d g,2. s4 |
+  c4 c c c8. c16 g2 b4 c d d8. d16 d4 d g,2. r4
+
   %refrain
-  g4 g g8. g16 g4 d' d g8. g16 g4 d d d4. d8 d4 d d2
-  g,4 g g8. g16 g4 d' d g8. g16 g4 c,4 c d4. d8 d4 d g,
+  g4 g g8. g16 g4 d' d <g g,>8. q16 g,4 d' d d4. d8 d4 d d2
+  g,4 g g8. g16 g4 d' d <g g,>8. q16 g,4 c4 c d4. d8 d4 d g,
   }
 }
 
@@ -128,10 +125,17 @@ to sing of his love for me.
 }
 
 refrain = \lyricmode {
-  (Oh) How mar -- vel -- lous, (oh) how won -- der -- ful.
+   How  mar -- vel -- lous,  how  won -- der -- ful.
   And my song shall ev -- er be:
-   (Oh) How mar -- vel -- lous, (oh) how won -- der -- ful.
-   Is my Sa -- viour's love for me.
+  How mar -- vel -- lous, how won -- der -- ful.
+   Is my _ Sa -- viour's love for me.
+}
+
+refrainTwo = \lyricmode {
+   O how  mar -- vel -- lous,  O how  won -- der -- ful.
+  \repeat unfold 7 { \skip 1 }
+  O how mar -- vel -- lous, O how won -- der -- ful.
+   \repeat unfold 7 { \skip 1 }
 }
 rehearsalMidi = #
 (define-music-function
@@ -157,6 +161,7 @@ rehearsalMidi = #
  #})
 
 \score {
+%\unfoldRepeats {
   \new ChoirStaff <<
     \new Staff \with {
       midiInstrument = "choir aahs"
@@ -169,10 +174,11 @@ rehearsalMidi = #
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "tenor1" { \verseOne \refrain }
-    \new Lyrics \with {
+    } \lyricsto "tenor2" { \verseOne \refrain }
+
+  \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "tenor1" \verseTwo
+    } \lyricsto "tenor1" { \verseTwo \refrainTwo }
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
     } \lyricsto "tenor1" \verseThree
@@ -192,11 +198,14 @@ rehearsalMidi = #
       \new Voice = "bass2" { \voiceTwo \bass }
     >>
   >>
+%}
   \layout { }
+
   \midi {
     \tempo 4=108
   }
 }
+
 
 % Rehearsal MIDI files:
 \book {
