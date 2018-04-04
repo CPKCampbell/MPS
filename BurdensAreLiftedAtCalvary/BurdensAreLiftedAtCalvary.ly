@@ -28,6 +28,7 @@
 global = {
   \key f \major
   \time 6/8
+  \tempo "Lento"
 }
 
 lead = \relative c' {
@@ -47,6 +48,7 @@ tenor = \relative c' {
   c4 a8 a4 c8 c d c bf4. bf4 8 bf c bf a4.~ a f8 f f bf8. bf16 f8 |
   f4 a8 a4. bf8 c d c4 g8 g4. ( a ) \bar "||"
   % refrain
+  \tempo "Faster"
   f8 f f bf8. 16 f8 f4 a8 a4. bf4 bf8 bf4. |
   c4 a8 a4. f8 f f bf8. a16 bf8 c4 a8 a4. bf8 c d c4 bf8 a4 ( bf8 a4. )
   \bar "|."
@@ -144,22 +146,22 @@ left = \relative c' {
 choirPart = \new ChoirStaff <<
   \new Staff \with {
     midiInstrument = "choir aahs"
-    instrumentName = "Lead"
-  } \new Voice = "lead" \lead
+    instrumentName = "Tenor"
+  } \new Voice = "tenor" \tenor
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "lead" \verseOne
+  } \lyricsto "tenor" \verseOne
    \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "lead" {  \verseTwo \refrain }
+  } \lyricsto "tenor" {  \verseTwo \refrain }
    \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
-  } \lyricsto "lead" \verseThree
+  } \lyricsto "tenor" \verseThree
 
   \new Staff \with {
     midiInstrument = "choir aahs"
-    instrumentName = "Tenor"
-  } \new Voice = "tenor" \tenor
+    instrumentName = "Lead"
+  } \new Voice = "lead" \lead
 
   \new Staff \with {
     midiInstrument = "choir aahs"

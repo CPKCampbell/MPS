@@ -8,6 +8,8 @@
   tagline = ""
 }
 
+\include "articulate.ly"
+
 \paper {
   #(set-paper-size "letter")
 systems-per-page = #4
@@ -36,6 +38,15 @@ global = {
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = 1,1,1,1
+    \tempo \markup {
+    \concat {
+      (
+      \smaller \note {8 } #1 " " \note {8 } #1
+      " = "
+      \smaller  \note {8. } #1 " " \note {16 } #1
+      )
+    }
+  }
 }
 bb = {
  \bar "" \break
@@ -111,7 +122,7 @@ verseOne = \lyricmode {
   \set stanza = "1."
  While stroll -- ing through the fields of time,
 There are man -- y things to see.
-But na -- ture is the great -- est site
+But na -- ture is the great -- est sight
 That there could ev -- er be.
 The great -- est of them all to me
 Is how the world was formed.
@@ -134,7 +145,7 @@ verseThree = \lyricmode {
   Two thou -- sand years  have come and  gone since _ God looked down in love.
 There in the town of Beth -- le -- hem a Rose be -- gan to bud.
 It lived to bloom un -- til one day was crushed with aw -- ful frown.
-And then in love from God a -- bove was moved to high -- er ground.
+And then with love from God a -- bove was moved to high -- er ground.
 }
 
 refrain = \lyricmode {
@@ -156,11 +167,12 @@ rehearsalMidi = #
      \context Staff = $name {
        \set Score.midiMinimumVolume = #0.5
        \set Score.midiMaximumVolume = #0.6
-       \set Score.tempoWholesPerMinute = #(ly:make-moment 90 4)
+       \set Score.tempoWholesPerMinute = #(ly:make-moment 82 4)
        \set Staff.midiMinimumVolume = #0.8
        \set Staff.midiMaximumVolume = #1.0
        \set Staff.midiInstrument = $midiInstrument
      }
+  
      \new Lyrics \with {
        alignBelowContext = $name
      } \lyricsto $name $lyrics
@@ -174,7 +186,7 @@ rehearsalMidi = #
       instrumentName = \markup \center-column { "Tenor" "Lead" }
        \consists "Merge_rests_engraver"
          } <<
-      \clef "bass"
+      \clef "treble_8"
       \new Voice = "tenor" { \voiceOne \tenor }
       \new Voice = "lead" { \voiceTwo \lead }
     >>
@@ -200,7 +212,7 @@ rehearsalMidi = #
   }
     }
   \midi {
-    \tempo 4=90
+    \tempo 4=82
   }
 }
 
@@ -208,6 +220,7 @@ rehearsalMidi = #
 \book {
   \bookOutputSuffix "tenor"
   \score {
+    \articulate
     \rehearsalMidi "tenor" "tenor sax" { \verseOne \refrain }
     \midi { }
   }
