@@ -60,16 +60,25 @@ lead = \relative c' {
 
 
 
-baritone = \relative c' {
+baritone = \relative c {
   \global
-  % Music follows here.
+  d8. d16 g4 d8 d e4 e8 c b2. d8. d16 d4 d8. d16 g4 g8. d16 d2. 
+  d8. d16 g4 d8 d e4 e8 c b2. d8. d16 d4 d8 d e4 d8 d d2.
+  % refrain
+  g8. a16 b2. b8. g16 fs2. fs8. g16 a4 a8 a a4 g8 fs g2.
+  g8. a16 b2. g8. e16 e2. d8 c b4 d8 d d4 d8 d d2.
+  \bar "||"
 
 }
 
 bass = \relative c {
   \global
-  % Music follows here.
-
+  g'8. g16 g4 b,8 b c4 c8 c g2. b8. d16 g4 g8. g16 g4 g8. g16 d2.
+  g8. g16 g4 b,8 b c4 c8 c g2. b8. d16 g4 b,8 b c4 d8 d g,2.
+  %refrain
+  r4 r g8 g g4 g'8. g16 d4 d8 d d4 d8. d16 b4 b8 b b4 b8 b g'4 g,8 g g4 r
+  r4 g8 g g4 g8. b16 c4 c8 c c4 c8 c d4 d8 d d4 d8 d g2.
+\bar "||"
 }
 
 verseOne = \lyricmode {
@@ -106,6 +115,12 @@ In the sweet by and by,
 We shall meet on that beau -- ti -- ful shore.
 }
 
+refrainTB = \lyricmode {
+  In the sweet by and by, by and by
+We shall meet on that beau -- ti -- ful shore, by and by;
+In the sweet by and by, by and by
+We shall meet on that beau -- ti -- ful shore.
+}
 
 rehearsalMidi = #
 (define-music-function
@@ -158,7 +173,7 @@ choirPart = \new ChoirStaff <<
     instrumentName = "Tenor"
   } \new Voice = "tenor" \tenor
  \new  Lyrics \lyricsto "tenor"  \verseOne
-    \new Lyrics  \lyricsto "tenor" { \verseTwo \refrain }
+    \new Lyrics  \lyricsto "tenor" { \verseTwo \refrainTB }
     \new Lyrics  \lyricsto "tenor" \verseThree
 
   \new Staff \with {
@@ -179,7 +194,7 @@ choirPart = \new ChoirStaff <<
     \new Voice = "bass" \bass
   }
    \new Lyrics  \lyricsto "bass" \verseOne
-    \new Lyrics  \lyricsto "bass" { \verseTwo \refrain }
+    \new Lyrics  \lyricsto "bass" { \verseTwo \refrainTB }
     \new Lyrics  \lyricsto "bass" \verseThree
 >>
 %{
