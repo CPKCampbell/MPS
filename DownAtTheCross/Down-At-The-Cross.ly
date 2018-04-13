@@ -32,7 +32,7 @@ global = {
 
 tenor = \relative c' {
   \global
-  ef4\mf ef8. df16 c4 c8. ef16 df4 df c2 ef4 ef8. ef16 ef4 ef8. ef16 |
+  ef4\mp ef8. df16 c4 c8. ef16 df4 df c2 ef4 ef8. ef16 ef4 ef8. ef16 |
   ef4 ef ef2 ef4 ef8. df16 c4 ef8. ef16 df4 df c2 ef4.\cresc c8 ef4 df c1 |
   \bar "||"
   % refrain
@@ -57,7 +57,7 @@ af4 af8. af16 af4 af8. af16 af4 af af2 af4 af8. af16 c4 c8. c16 |
 c4 af g2 af4 af8. af16 af4 af8. af16 af4 af af2 af4. af8 af4 g af1 |
 \bar "||"
 % refrain
-f4.^\markup{ \tiny \italic "Vs 1, 3, 4 only" } f8 af4 af af1 af4. af8 af4 af g4. ( af8 g2 ) |
+f4.^\markup{ \tiny \italic "Vs 1, 2, 4 only" } f8 af4 af af1 af4. af8 af4 af g4. ( af8 g2 ) |
 af4 af8. af16 af4 af8. af16 af4 af af2 af4. af8 af4 g af1
 \bar "|."
 }
