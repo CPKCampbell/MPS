@@ -28,7 +28,11 @@
 
 global = {
   \key f \major
-  \time 4/4
+    \time 4/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+\set Timing.beatStructure = #'(1 1 1 1)	
+
   \tempo "With assurance " 4 = 120
 }
 
@@ -43,6 +47,11 @@ d4 8 8 d8( c ) d4 e1 R1 |
 %21
 f4\mark \markup { \musicglyph "scripts.segno" } d4 c ( a ) f'8 d4 c8~ c4 r4 r4 c bf bf |
 c8 bf4 a8~ a4 r4 r d4 cs8 8 8 8 |
+%27
+d4 a8 d~ d2 b4 r d8 d4 f8~ f1( e2 ) r2 |
+%30
+r8 f8 8 8 4 c4 |
+f8 d4 c8~ c2 r4 bf bf4 bf |
 
 }
 
@@ -57,6 +66,11 @@ b4 8 8 b8( a ) b4 c1 R1 |
 %21
 c4 bf a( f ) c'8 bf4 a8~ 4 r4 r af4 g f |
 af8 g4 f8~ 4 r4 r a4 8 8 8 8 |
+%27
+a8( g ) f a~ a2 g4 r b8 4  c8~ 1~ 2 r2 |
+%30
+r8 c8 8 8 4 a4 |
+c8 bf4 a8~ 2 r4 f g f |
 
 }
 
@@ -71,6 +85,11 @@ f4 8 8 f8( e ) f4 g1  R1 |
 %21
 a4\f f f2 a8 g4 f8~ f4 r r f4 d d |
 ef8 d4 c8~ 4 r r f4 e8 8 8 8 |
+%27
+f8( e ) d f~ f2 d4 r g8 4 8~ g1( bf2 ) r2 |
+%30
+r8 a8 8 8 4 4 |
+a8 f4 a8~ 2 r4 d,4 4 4 |
 
 
 }
@@ -85,7 +104,10 @@ a8 b cs d~ d4 r4 g,8 8 8 8 4 4 |
 g4 8 8 4 4 c1 r4 c8\f bf a( c ) d4 |
 f4 4 f,2 8 f4 f8~ f8 f8 g a bf4 4 4 4 |
 f8 4 f8~ 8 8 a8 c d4 4 a8 8 8 8 |
-
+%27
+d4 8 8~ 2 g,4 r g8 4 c8~ 1~ 2 r8 c8 d c |
+%30 f4 8 8 4 4 |
+f8 4 8~ 4 c4 bf2 4 4 |
 
 }
 
