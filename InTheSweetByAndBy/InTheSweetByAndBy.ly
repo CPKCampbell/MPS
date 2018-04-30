@@ -11,8 +11,10 @@
 
 \paper {
   #(set-paper-size "letter")
+  ragged-last-bottom = ##t
+ 
 }
-
+#(set-global-staff-size 18)
 \layout {
   \context {
     \Voice
