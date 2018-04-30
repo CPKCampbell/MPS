@@ -12,7 +12,7 @@
 \paper {
   #(set-paper-size "letter")
   ragged-last-bottom = ##t
- 
+
 }
 #(set-global-staff-size 18)
 \layout {
@@ -64,7 +64,7 @@ lead = \relative c' {
 
 baritone = \relative c {
   \global
-  d8. d16 g4 d8 d e4 e8 c b2. d8. d16 d4 d8. d16 g4 g8. d16 d2. 
+  d8. d16 g4 d8 d e4 e8 c b2. d8. d16 d4 d8. d16 g4 g8. d16 d2.
   d8. d16 g4 d8 d e4 e8 c b2. d8. d16 d4 d8 d e4 d8 d d2.
   % refrain
   g8. a16 b2. b8. g16 fs2. fs8. g16 a4 a8 a a4 g8 fs g2.
@@ -79,7 +79,7 @@ bass = \relative c {
   g8. g16 g4 b,8 b c4 c8 c g2. b8. d16 g4 b,8 b c4 d8 d g,2.
   %refrain
   r4 r g8 g g4 g'8. g16 d4 d8 d d4 d8. d16 b4 b8 b b4 b8 b g'4 g,8 g g4 r
-  r4 g8 g g4 g8. b16 c4 c8 c c4 c8 c d4 d8 d d4 d8 d <g g,>2.
+  r4 g8 g g4 g8. b16 c4 c8 c c4 c8 c d4 d8 d d4 d8 d g2.
 \bar "||"
 }
 
@@ -166,10 +166,14 @@ choirPart = \new ChoirStaff <<
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = "Lead"
-  } \new Voice = "lead" \lead
+  }
+  %{\new Voice = "lead" \lead
    \new Lyrics  \lyricsto "lead" \verseOne
     \new Lyrics  \lyricsto "lead" { \verseTwo \refrain }
     \new Lyrics  \lyricsto "lead" \verseThree
+  %}
+  \new Voice \partcombine \tenor \lead
+  %{
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = "Tenor"
@@ -177,7 +181,7 @@ choirPart = \new ChoirStaff <<
  \new  Lyrics \lyricsto "tenor"  \verseOne
     \new Lyrics  \lyricsto "tenor" { \verseTwo \refrainTB }
     \new Lyrics  \lyricsto "tenor" \verseThree
-
+  %}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = "Baritone"
@@ -222,7 +226,7 @@ pianoPart = \new PianoStaff \with {
   }
 }
 
-%{ Rehearsal MIDI files:
+% Rehearsal MIDI files:
 \book {
   \bookOutputSuffix "lead"
   \score {
@@ -253,5 +257,5 @@ pianoPart = \new PianoStaff \with {
     \rehearsalMidi "bass" "tenor sax" \verse
     \midi { }
   }
-%}
+}
 
