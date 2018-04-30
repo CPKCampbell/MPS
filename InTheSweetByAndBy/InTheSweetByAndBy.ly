@@ -77,7 +77,7 @@ bass = \relative c {
   g8. g16 g4 b,8 b c4 c8 c g2. b8. d16 g4 b,8 b c4 d8 d g,2.
   %refrain
   r4 r g8 g g4 g'8. g16 d4 d8 d d4 d8. d16 b4 b8 b b4 b8 b g'4 g,8 g g4 r
-  r4 g8 g g4 g8. b16 c4 c8 c c4 c8 c d4 d8 d d4 d8 d g2.
+  r4 g8 g g4 g8. b16 c4 c8 c c4 c8 c d4 d8 d d4 d8 d <g g,>2.
 \bar "||"
 }
 
@@ -220,7 +220,7 @@ pianoPart = \new PianoStaff \with {
   }
 }
 
-% Rehearsal MIDI files:
+%{ Rehearsal MIDI files:
 \book {
   \bookOutputSuffix "lead"
   \score {
@@ -251,5 +251,5 @@ pianoPart = \new PianoStaff \with {
     \rehearsalMidi "bass" "tenor sax" \verse
     \midi { }
   }
-}
+%}
 
