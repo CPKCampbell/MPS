@@ -8,9 +8,11 @@
   composer =  "G. H. Cook"
   poet = "H. J. Zelley"
   arranger = "A. L. Page, B. Van Essen"
+  tagline = ""
 }
 
 \layout {
+  #(layout-set-staff-size 18)
   \context {
     \Voice
     \consists "Melody_engraver"
@@ -42,6 +44,9 @@ lead = \relative c {
  d'4. d d d d d d d d c c d d d d d d d8 e d |
  b4. g a8 b a g4~ g16 r r4. d'8 d d e4. c c8 d e d4. b d8 d d d4. b b8 a g |
  a4. ( d ) d,8 e fs g4. g b8 a g a4. d d8 e d b4. g a8 b a g2. r4. |
+r2. d8 e d b4. g d'8 e d |
+c2. e4.~ e r4. d8 d d d2.~ d4.( e2. ) g8 g g g2.~ 4.\fermata
+\bar "|."
 }
 
 
@@ -54,12 +59,12 @@ tenor = \relative c {
  bf4. bf bf8 bf bf a2.\fermata a8 bf a |
  f4. a2.~ a a8 a a a4. a a8 a a bf2. c8 c c c4. a a8 a a |
  c4. c a8 a a bf4. bf bf8 bf bf a4~ a16 r r4. c8 c c bf4. d d8 c bf a4. c bf8 bf bf |
- a4. c b8 b b bf2. c,8 d e f4. f a8 g f g4. c a8 g a bf4. bf bf8 bf bf |
+ a4. c b8 b b bf2.\fermata c,8 d e f4. f a8 g f g4. c a8 g a bf4. bf bf8 bf bf |
  a2.\fermata \bar "||"  \key g \major d,8 e fs g4. g b8 a g |
  a4. d d8 e d b4. g b8 a g a2. d,8 e fs g4. g b8 a g a4. d b8 b b |
  g4. e fs8 fs fs d4~ d16 r r4.g8 g g g4. g c8 c c b4. d b8 b b b4. gs g8 a b |
  c2. d,8 e fs g4. g b8 a g a4. d b8 a b c4. c c8 c c b2.\fermata d8 e d b4. g2.~ g b8 a b |
- c2. c4.~ c4~ c16 r r4. c8 c c b2.~ b4. ( c2. ) e8 fs e d2.~ 4.\fermata
+ c2. c4.~ 4.\fermata r4. c8 c c b2.~ b4. ( c2. ) e8 fs e d2.~ 4.\fermata
  \bar "|."
 
 }
@@ -72,12 +77,12 @@ baritone = \relative c {
  c4. a e8 e e f4. f f8 g f f4. ( e)\fermata c8 d e f4. f a8 g f g4. g f8 f f |
  f4. d e8 d e c2. r4. r2. a'8 bf a e4. a a8 a a a4. d, d8 d d d2. g8 g g f4. f f8 f f |
  g4. g f8 f f f4. f e8 e g f4~ f16 r r4. c'8 c c d4. bf bf8 c d c4. a e8 e e |
- f4. f e8 e g f4~ f16 r r4. c'8 c c d4. bf bf8 c d c4. a e8 e e |
- f4. f f8 g f f4. ( e )\fermata \bar "||" \key g \major r4.   g4. g g |
+ f4. f e8 e g f4. ( e ) \fermata c8 d e f4. f a8 g f g4. g f8 f f f4. d e8 d e |
+ c2.  \bar "||" \key g \major r4.   g'4. g g |
  fs4. fs fs f f f e e  fs g g g fs fs f8 f f |
  e4. c c8 c c b4~ b16 r r4. g'8 g g e4. e g8 g g g4. g a8 a a gs4. e e8 e e |
  g4. ( fs ) d8 e fs g4. g b8 a g a4. a g8 g g g4. e fs8 e fs d2. r4. r2. d8 e d e4. g g8 g g |
- g2. g4.~ g4~ g16 r r4. fs8 fs fs g2.~ g4.~ g2. c8 d c b2.~ 4.\fermata |
+ g2. g4.~ 4. r4. fs8 fs fs g2.~ g4.~ g2. c8 d c b2.~ 4.\fermata |
  \bar "|."
 
 }
@@ -90,8 +95,13 @@ bass = \relative c {
  d4. g c,8 c c f2.\fermata a8 bf a f4. a2.~ a a8 a g
  f4. f d8 e f g4. ( f ) e8 e e f4. f f8 f f |
  e4. e ef8 ef ef d4. d c8 c c f4~ f16 r r4. c'8 c c bf4. d d8 c bf a4. c g8 g g |
- f4. e d8 d d c2. r4.
-
+ f4. e d8 d d c2.\fermata c8 d e f4. f a8 g f g4. e ef8 ef ef d4. g c,8 c c |
+ f2. \bar "||" \key g \major d8 e fs g4. g b8 a g |
+ a4. d d8 e d bf4. g bf8 a g a2. d,8
+ e fs g4. g b8 a g a4. d, g8 g g |
+ c,4. a d8 d d g,2. b8 b b c4. c e8 e e g4. g f8 f f e4. d cs8 cs cs |
+ d2.\fermata d8 e fs g4. g b8 a g a4. fs f8 f f e4. a d,8 d d g2.\fermata d8 e d e4. g2.~ g f8 f f |
+ e2. a4.~ a\fermata r4. a8 a a g2.~ 4.~ 2. g8 g g g2.~ 4. \fermata\bar "|."
 }
 
 verseA = \lyricmode {
