@@ -1,5 +1,5 @@
 \version "2.19.81"
-
+\pointAndClickOff
 \language "english"
 
 \header {
@@ -32,7 +32,7 @@ lead = \relative c {
   \global
   \clef "treble_8"
  c8 d e f4. f a8 g f g4. c c8 d c a4. f a8 g f g4~ 16 r16 r4. c,8 d e |
- f4. f a8 g f g4. c c8 d c a4. f g8 g f f4~ 16 r16 r4. c'8 c c d4. bf bf8 c d |
+ f4. f a8 g f g4. c c8 d c a4. f g8 g f f4. r4. c'8 c c d4. bf bf8 c d |
  c4. a c8 c c c4. a a8 g f g4. ( c)\fermata c,8 d e f4. f a8 g f g4. c c8 d c |
  a4. f g8 a g f2. r4. |
  r2. a8 bf a e4. a a8 b cs d4. a f8 g a bf2. c8 d c a4. c c8 d c |
@@ -49,7 +49,7 @@ tenor = \relative c {
   \global
    \clef "treble_8"
  c8 d e f4. f a8 g f g4. c c8 d c a4. f a8 g f g4~ g16 r  r4. c,8 d e |
- f4. a c8 bf a g4. c a8 g a bf4. bf bf8 bf bf a4~ a16 r r4. a8 a a bf4. d d8 c bf |
+ f4. a c8 bf a g4. c a8 g a bf4. bf bf8 bf bf a4. r4. a8 a a bf4. d d8 c bf |
  a4. c bf8 bf bf a4. c b8 b b bf2.\fermata c,8 d e f4. a c8 bf a g4. c a8 g a |
  bf4. bf bf8 bf bf a2.\fermata a8 bf a |
  f4. a2.~ a a8 a a a4. a a8 a a bf2. c8 c c c4. a a8 a a |
@@ -68,7 +68,7 @@ tenor = \relative c {
 baritone = \relative c {
   \global
  c8 d e f4. f a8 g f g4. c c8 d c a4. f a8 g f g4~ 16 r16 r4. c,8 d e |
- f4. f a8 g f g4. g f8 f f f4. d e8 d e c4~ c16 r r4. c'8 c c d4. bf bf8 c d |
+ f4. f a8 g f g4. g f8 f f f4. d e8 d e c4. r4. c'8 c c d4. bf bf8 c d |
  c4. a e8 e e f4. f f8 g f f4. ( e)\fermata c8 d e f4. f a8 g f g4. g f8 f f |
  f4. d e8 d e c2. r4. r2. a'8 bf a e4. a a8 a a a4. d, d8 d d d2. g8 g g f4. f f8 f f |
  g4. g f8 f f f4. f e8 e g f4~ f16 r r4. c'8 c c d4. bf bf8 c d c4. a e8 e e |
@@ -85,7 +85,7 @@ baritone = \relative c {
 bass = \relative c {
   \global
  c8 d e f4. f a8 g f g4. c c8 d c a4. f a8 g f g4~ 16 r16 r4. c,8 d e |
- f4. a c8 bf a g4. e ef8 ef ef d4. g c,8 c c f4~ f16 r r4. a8 a a bf4. d d8 c bf |
+ f4. a c8 bf a g4. e ef8 ef ef d4. g c,8 c c f4. r4. a8 a a bf4. d d8 c bf |
  a4. c g8 g g f4. e d8 d d c2.\fermata c8 d e f4. a c8 bf a g4. e ef8 ef ef |
  d4. g c,8 c c f2.\fermata a8 bf a f4. a2.~ a a8 a g
  f4. f d8 e f g4. ( f ) e8 e e f4. f f8 f f |
