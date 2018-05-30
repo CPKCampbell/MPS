@@ -45,8 +45,8 @@ lead = \relative c {
  b4. g a8 b a g4~ g16 r r4. d'8 d d e4. c c8 d e d4. b d8 d d d4. b b8 a g |
  a4. ( d )\fermata  d,8 e fs g4. g b8 a g a4. d d8 e d b4. g a8 b a g2.\fermata r4. |
 r2. d8 e d b4. g d'8 e d |
-c2. e4.~ e\fermata r4. d8 d d d2.~ d4.( e2. ) g8 g g g2.~ 4.\fermata
-\bar "|."
+c2. c4. ~ c\fermata r4. c8 c c b2.~ b4. ( c2. ) e8 fs e d2.~ 4.\fermata  \bar "|."
+%e4.~ e\fermata r4. d8 d d d2.~ d4.( e2. ) g8 g g g2.~ 4.\fermata \bar "|."
 }
 
 
@@ -64,8 +64,9 @@ tenor = \relative c {
  a4. d d8 e d b4. g b8 a g a2. d,8 e fs g4. g b8 a g a4. d b8 b b |
  g4. e fs8 fs fs d4~ d16 r r4.g8 g g g4. g c8 c c b4. d b8 b b b4. gs g8 a b |
  c2.\fermata d,8 e fs g4. g b8 a g a4. d b8 a b c4. c c8 c c b2.\fermata d8 e d b4. g2.~ g b8 a b |
- c2. c4.~ 4.\fermata r4. c8 c c b2.~ b4. ( c2. ) e8 fs e d2.~ 4.\fermata
- \bar "|."
+ c2. e4.~ e\fermata r4. d8 d d d2.~ d4.( e2. ) g8 g g g2.~ 4.\fermata
+\bar "|."
+ %4.\fermata r4. c8 c c b2.~ b4. ( c2. ) e8 fs e d2.~ 4.\fermata  \bar "|."
 
 }
 
@@ -175,7 +176,7 @@ flood -- ing my soul with glo -- ry di -- vine;
 Hal _ le -- lu -- jah, I am re -- joic -- ing,
 sing -- ing His prai -- ses, Je -- sus is mine.
 Sing -- ing His prai -- ses,
-sing -- ng His prai -- ses,
+sing -- ing His prai -- ses,
 Je -- sus is mine,
 Je -- sus is mine!
 
