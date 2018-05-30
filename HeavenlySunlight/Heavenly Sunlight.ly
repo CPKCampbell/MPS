@@ -45,7 +45,7 @@ lead = \relative c {
  b4. g a8 b a g4~ g16 r r4. d'8 d d e4. c c8 d e d4. b d8 d d d4. b b8 a g |
  a4. ( d )\fermata  d,8 e fs g4. g b8 a g a4. d d8 e d b4. g a8 b a g2.\fermata r4. |
 r2. d8 e d b4. g d'8 e d |
-c2. c4. ~ c\fermata r4. c8 c c b2.~ b4. ( c2. ) e8 fs e d2.~ 4.\fermata  \bar "|."
+c2. c4. ~ c\fermata r4. c'8 c c b2.~ b4. ( c2. ) e8 fs e d2.~ 4.\fermata  \bar "|."
 %e4.~ e\fermata r4. d8 d d d2.~ d4.( e2. ) g8 g g g2.~ 4.\fermata \bar "|."
 }
 
