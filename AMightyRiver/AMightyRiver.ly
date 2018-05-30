@@ -53,13 +53,17 @@ tenor = \relative c' {
   \alternative {
     {g1 r4 ef g bf }
     { g1 }
+  }
     r4 b,8 b cs4 e \bar "||" \mark \default \key e \major e1~ e4 e8 e gs ( fs ) e4 |
-    gs1
+    gs1 r4 b,8 b cs4 e gs b8 b gs4 b |
+    b4 cs8 cs cs4 cs fs,1 R1 |
+   r4 e8 e gs4 b d1 r4 cs b cs a2 b4 a |
+   gs4 e gs e b' b,8 b cs4 e e1 |
   }
 
 
 
-}
+
 
 lead = \relative c' {
   \global
