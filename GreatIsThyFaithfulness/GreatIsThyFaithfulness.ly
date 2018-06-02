@@ -1,6 +1,6 @@
 \version "2.21.0"
 \language "english"
-
+\pointAndClickOff
 \header {
   title = "Great Is Thy Faithfulness"
  copyright =  "©1923, renewed 1951 Hope Publishing Co."
@@ -11,6 +11,7 @@
     instrument = "TTBB"
     encodingsoftware =  "MuseScore 2.0.2"
     poet =  "Thomas O. Chrisholm"
+    tagline = ""
 }
 
 \layout {

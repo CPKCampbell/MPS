@@ -15,6 +15,7 @@
 }
 
 \layout {
+   #(layout-set-staff-size 18)
   \context {
     \Voice
     \consists "Melody_engraver"

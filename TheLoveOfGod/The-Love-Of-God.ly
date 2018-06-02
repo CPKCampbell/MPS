@@ -12,7 +12,7 @@
 \paper {
   #(set-paper-size "letter")
 }
-
+#(set-global-staff-size 16)
 \layout {
   \context {
     \Voice
