@@ -1,5 +1,5 @@
 \version "2.19.81"
-%\pointAndClickOff
+\pointAndClickOff
 \language "english"
 
 \header {
