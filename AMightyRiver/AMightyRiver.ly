@@ -24,7 +24,7 @@
   \context {
     \Lyrics
     \override VerticalAxisGroup.staff-affinity = #CENTER
-    \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #3
+ %   \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #3
     \override LyricText.self-alignment-X = #LEFT
   }
 }
@@ -60,6 +60,12 @@ tenor = \relative c' {
     b4 cs8 cs cs4 cs fs,1 R1 |
    r4 e8 e gs4 b d1 r4 cs b cs a2 b4 a |
    gs4 e gs e b' b,8 b cs4 e e1 |
+   R1 \bar "||" \key f \major r2 bf'4. a8 R1 r2 df4. c8 |
+   R1 r4 a2 g4 fs2~ fs8 g a4 bf r f4. e8 |
+   R1 r4 a8 a g4 f ef ef ef f d1 |
+   r4 d' c bf a2. f4 a2. f4 c'1 |
+   r4 c d8 f4 ( d8 ) f1 r4 c d8 f4 ( d8 ) f1 |
+   r4 d2 c4 f1~ f~ f4 r4 g4. ( f8 ) \bar "||"
   }
 
 
@@ -94,6 +100,13 @@ baritone = \relative c {
   cs4 es8 es es4 es fs1 r4 b,8 b cs4 e |
   gs1~ gs4 gs fs e cs'1 r4 cs b a |
   gs4 e gs e b' b,8 b cs4 e e1 |
+  r4 c8 c d4 f \bar "||" \key f \major f1 r4 f8 f a ( g ) f4 a1 |
+  r4 c,8 c d4 f f e f g a c d c g1 |
+  r4 c,8 c d4 f a1~ a4 a g f d'1 |
+  r4 d c bf a2. f4 a2. f4 bf1 |
+  r4 c bf8 c4. a1 r4 c bf8 c4. a1 |
+  r4 d2 c4 f,1~ f~ f4 r4 r2
+  \bar "||"
 }
 
 bass = \relative c {
@@ -104,8 +117,15 @@ bass = \relative c {
 
 verseOne = \lyricmode {
 
-  % Lyrics follow here.
-
+  A might -- y riv -- er, the riv -- er of love,
+  From Cal -- v’ry’s moun -- tain and the cross there -- of.
+  A might -- y riv -- er, the riv -- er of love,
+  Flows wide with mer -- cy from the Lord a -- bove.
+  We sing of
+  Je -- sus of Gal -- i -- lee.
+  He said to Pe -- ter “Come fol -- low Me,
+  Just leave your fish -- ing, leave the nets and sea.
+  You’ll fish for sin -- ners, come and fol -- low Me”
 }
 
 verseTwo = \lyricmode {
@@ -153,11 +173,8 @@ rehearsalMidi = #
       \new Voice = "tenor" { \voiceOne \tenor }
       \new Voice = "lead" { \voiceTwo \lead }
     >>
-    \new Lyrics  \lyricsto "tenor" \verseOne
-    \new Lyrics  \lyricsto "tenor" { \verseTwo  }
-    \new Lyrics  \lyricsto "tenor" \verseThree
 
-    \new Staff \with {
+    \new Staff = "basses" \with {
       midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { "Baritone" "Bass" }
     } <<
@@ -165,12 +182,17 @@ rehearsalMidi = #
       \new Voice = "baritone" { \voiceOne \baritone }
       \new Voice = "bass" { \voiceTwo \bass }
     >>
+ \new Lyrics \with { alignAboveContext = "basses" }
+ \lyricsto "baritone" \verseOne
+    \new Lyrics  \lyricsto "baritone" { \verseTwo  }
+    \new Lyrics  \lyricsto "baritone" \verseThree
+
   >>
   \layout {
     \context {
       \Lyrics
-      \override VerticalAxisGroup.staff-affinity = #CENTER
-      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #3
+    %  \override VerticalAxisGroup.staff-affinity = #DOWN
+    %  \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #3
     }
   }
   \midi {
