@@ -126,6 +126,13 @@ verseOne = \lyricmode {
   He said to Pe -- ter “Come fol -- low Me,
   Just leave your fish -- ing, leave the nets and sea.
   You’ll fish for sin -- ners, come and fol -- low Me”
+  We sing of \skip 1
+% Goin to build
+Goin’ to build my life on the Word of God.
+Goin’ to turn my feet in the nar -- row way that the saints have trod.
+Goin’ to set my heart on things a -- bove,
+And tell the world that I am full of the Sa -- viour’s love.
+
 }
 
 verseTwo = \lyricmode {
