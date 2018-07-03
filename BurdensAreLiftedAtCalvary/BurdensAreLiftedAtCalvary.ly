@@ -1,6 +1,6 @@
 \version "2.21.0"
 \language "english"
-
+\pointAndClickOff
 \header {
   title = "Burdens Are Lifted At Calvary"
   composer = "John M. Moore"
@@ -205,9 +205,10 @@ pianoPart = \new PianoStaff \with {
  %   \pianoPart
   >>
   \layout { }
-  \midi {
+%{  \midi {
     \tempo 4=100
   }
+%}
 }
 
 %{ {Rehearsal MIDI files:

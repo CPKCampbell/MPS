@@ -247,12 +247,14 @@ rehearsalMidi = #
     >>
   >>
   \layout { }
+  %{
   \midi {
     \tempo 4=100
   }
+  %}
 }
 
-% Rehearsal MIDI files:
+%{ Rehearsal MIDI files:
 \book {
   \bookOutputSuffix "tenor1"
   \score {
@@ -283,5 +285,5 @@ rehearsalMidi = #
     \rehearsalMidi "bass2" "tenor sax" \verseOne
     \midi { }
   }
-}
+%}
 

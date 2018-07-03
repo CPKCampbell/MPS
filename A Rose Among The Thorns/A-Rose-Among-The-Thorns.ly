@@ -1,6 +1,6 @@
 \version "2.21.0"
 \language "english"
-
+\pointAndClickOff
 \header {
   title = "A Rose Among The Thorns"
   composer = "Ernest C. Martin"
@@ -211,12 +211,15 @@ rehearsalMidi = #
    \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #3
   }
     }
+    %{
   \midi {
     \tempo 4=82
   }
+    %}
 }
 
-% Rehearsal MIDI files:
+%{ 
+%Rehearsal MIDI files:
 \book {
   \bookOutputSuffix "tenor"
   \score {
@@ -249,4 +252,4 @@ rehearsalMidi = #
     \midi { }
   }
 }
-
+%}

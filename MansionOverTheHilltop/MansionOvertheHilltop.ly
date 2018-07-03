@@ -1,6 +1,6 @@
 \version "2.21.0"
 \language "english"
-
+\pointAndClickOff
 \header {
   title = "Mansion Over the Hilltop"
   composer = "Ira Stanphill"
