@@ -19,13 +19,13 @@ global = {
   \key f \major
   \time 4/4
   \tempo 4=92
-%  \partial 2
+ \partial 2
 }
 
 lead = \relative c'' {
   \global
   \clef "treble_8"
-  % Music follows here.
+ R1*3 r2
 
 }
 
@@ -33,7 +33,6 @@ lead = \relative c'' {
 tenor = \relative c' {
   \global
    \clef "treble_8"
-   R1*3 r2
  c4 bf a2 a4 a8 c~ c4 c c c |
  bf2 bf4 bf8 bf~ bf4 c c bf a2 a4 a8 c~
  c4 c c c bf1~ bf2 c4\f bf a2 a4 a8 c~
@@ -65,9 +64,36 @@ tenor = \relative c' {
 }
 
 
-baritone = \relative c' {
+baritone = \relative c {
   \global
-  % Music follows here.
+c4\mp d f2 f4 f8 a~ a4 a g f
+f2 f4 f8 d~ d4 c c d f2 f4 f8 a~ |
+a4 a g f g1~ g2 c,4\f d f2 f4 f8 a~
+a4 a g f g f f f8 d~ d4 c c d |
+f4 f a8 a4 bf8~ bf4 bf a8 ( g ) f4 f2 f f2\fermata c4\fermata d \fermata |
+%21
+f2 f4 f8 a~ a4 a g f f2 f4 f8 d~ d4 c c d |
+f2 f4 f8 a~ a4 a g f g1~ g2 c,4\mf d |
+f2 f4 f8 a~ a4 a g f g f f f8 d~ d4 c c d |
+f4 f a8 a4 bf8~ bf4 bf a8 ( g ) f4 f2 f4. f8~ f2 g4 a |
+bf4 bf bf8 bf4 bf8~ bf4 bf c c a2 a8 g4 f8~ f2 r2 |
+R1*3 r2 c4\f d f2 f4 f8 a~ a4 a g f |
+g4 f f f8 d~ d4 c c d f f a8 a4 bf8~ bf4 bf a8 ( g ) f4 |
+f2 f4.  f8~ f2 r2 R1*8 |
+%61
+d4 d f g a g8 f~ f4 f |
+d4 d f g8 a~ a2 r4 a\crescTextCresc g g g g |
+a4 a a a bf\f bf bf8 c4 c8~ c1 r2 c,4 d |
+f2 f4 f8 a~ a4 a g f f2 f4 f8 d~ d4 c\breathe c d |
+f2 f4 f8 a~ a4 a g f g1~ g2 c,4 d |
+f2 f4 f8 a~ a4 a g f g f f f8 d~ d4 c c d |
+f4 f a8 a4 bf8~ bf4 bf a8 ( g ) f4 f2 f4. f8~ f2 g4 a |
+bf4 bf bf8 bf4 bf8~ bf4 bf c c a2 a8 g4 f8~ f2 r2 |
+R1*3 r2 c4 d |
+f2 f4 f8 a~ a4 a g f g f f f8 d~ d4 c c d |
+f4 f a8 a4 bf8~ bf4 bf a8 ( g ) f4 f2 f4. f8~
+f2 c4 d f1~ f4 r f f |
+g1 ( bf4 ) r c bf a1~ a~ a~ a4 r r2
 
 }
 
