@@ -29,25 +29,43 @@ lead = \relative c {
   \clef "treble_8"
   R1*2 ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
   c2 d  ef4 r \tuplet 3/2 {f g af} g2 f4. ( ef8 ) |
-  % Music follows here.
-
+  ef2. r4 ef2 bf' ef,2. \tuplet 3/2 { r8 f g } |
+  af2 g4. ( f8 ) g ( f4.~ f4 ) \tuplet 3/2 { r8 r bf, } c2 d |
+  ef4 r \tuplet 3/2 { f g af } g2 f ef2. r4 |
+  %19
+  d8 g~ \tuplet 3/2 { g bf d } c2 d,8 g~ \tuplet 3/2 { g bf d } c2 |
+  bf4 bf~ bf8 g bf g af2. r4 ef2 bf' |
+  ef,2. \tuplet 3/2 { r8 f g } af2 g f2. \tuplet 3/2 { r8 r bf, } |
 }
 
 
 tenor = \relative c {
   \global
-   \clef "treble_8"
-   R1*2 ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
+  \clef "treble_8"
+  R1*2 ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
   c2 d  ef4 r \tuplet 3/2 {f g af} g2 f4. ( ef8 ) |
-
-
+  g2. r4 ef'2 d c2 ( bf4 ) \tuplet 3/2 { r8 bf bf } |
+  c2 bf bf2. \tuplet 3/2 { r8 r bf } af2 bf |
+  c4 r \tuplet 3/2 { af bf c  } bf2 bf g2. r4 |
+%19
+d8 d~ \tuplet 3/2 { d d d } ef4 ( d ) d8 d~ \tuplet 3/2 { d d d } d4 ( c ) bf8 bf~ \tuplet 3/2 { bf bf bf } c2 |
+bf4 bf ( df8 df df df ) c2. r4ef,2 bf' |
+ef,2. \tuplet 3/2 { r8 f g  } af2 g f2. \tuplet 3/2 {  r8 r bf } |
 }
 
 
 baritone = \relative c {
   \global
-   R1*2 ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
+  R1*2 ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
   c2 d  ef4 r \tuplet 3/2 {f g af} g2 f4. ( ef8 ) |
+  ef2. r4 ef2 f ef2. \tuplet 3/2 { r8 f ef } |
+  ef2 ef ef8 ( d4.~ d4 ) \tuplet 3/2 { r8 r bf } c2 d |
+  ef4 r \tuplet 3/2 { c ef ef } ef2 d bf2. r4 |
+%19
+d8 g~ \tuplet 3/2 { g g g } a2 d,8 g~ \tuplet 3/2 { g g g } a2
+d,8 d~ \tuplet 3/2 { d d d  } ef4 ( f ) |
+d4 f ( e8 ) e e e ef2 ( d4 ) r4 ef2 bf' |
+ef,2. \tuplet 3/2 { r8 f g } af2 g f2. \tuplet 3/2 { r8 r bf, } |
 
 }
 
@@ -55,7 +73,9 @@ bass = \relative c {
   \global
   R1*2 ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
   c2 d  ef4 r \tuplet 3/2 {f g af} g2 f4. ( ef8 ) |
-
+g2. r4 ef'2 d c2 ( bf4 ) \tuplet 3/2 { r8 bf bf } |
+  c2 bf bf2. \tuplet 3/2 { r8 r bf } af2 f |
+  g4 r \tuplet 3/2 { f g af } g2f ef2. r4 |
 }
 
 verse = \lyricmode {
@@ -149,7 +169,7 @@ pianoPart = \new PianoStaff \with {
 \score {
   <<
     \choirPart
- %   \pianoPart
+    %   \pianoPart
   >>
   \layout { }
   \midi {
