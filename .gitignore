@@ -1,5 +1,14 @@
 *-
 *-midi.ly
+*.nwc
+*.sib
+*.rg
+*.mscx
+*.mp3
+*.xml
+*.zip
+*.png
+*.jpeg
 *-systems.tex
 *-systems.texi
 *.600pk
@@ -13,7 +22,7 @@
 *.graph
 *.info
 *.log
-*.midi
+*.mid*
 *.new
 *.orig
 *.patch
