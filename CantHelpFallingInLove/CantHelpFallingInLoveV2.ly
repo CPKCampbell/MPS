@@ -5,9 +5,16 @@
 \header {
   title = "Can't Help Falling In Love"
   instrument = "TTBB"
-  composer = "Weiss Peretti, Creatore"
+  composer = "Weiss, Peretti, Creatore"
   arranger = "Emerson"
   tagline = ""
+}
+#(set-global-staff-size 18)
+
+\paper {
+%  system-system-spacing = #'((basic-distance . 0.5) (padding . 0))
+  ragged-last-bottom = ##f
+  ragged-bottom = ##f
 }
 
 \layout {
@@ -27,7 +34,7 @@ global = {
 lead = \relative c {
   \global
   \clef "treble_8"
-  R1*2 ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
+ ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
   c2 d  ef4 r \tuplet 3/2 {f g af} g2 f4. ( ef8 ) |
   ef2. r4 ef2 bf' ef,2. \tuplet 3/2 { r8 f g } |
   af2 g4. ( f8 ) g ( f4.~ f4 ) \tuplet 3/2 { r8 r bf, } c2 d |
@@ -51,7 +58,7 @@ lead = \relative c {
 tenor = \relative c {
   \global
   \clef "treble_8"
-  R1*2 ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
+ ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
   c2 d  ef4 r \tuplet 3/2 {f g af} g2 f4. ( ef8 ) |
   g2. r4 ef'2 d c2 ( bf4 ) \tuplet 3/2 { r8 bf bf } |
   c2 bf bf2. \tuplet 3/2 { r8 r bf } af2 bf |
@@ -73,11 +80,11 @@ d2 ( e ) f1~ f R1 \bar "|."
 }
 
 
-baritone = \relative c {
+bass = \relative c {
   \global
-  R1*2 ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
+ ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
   c2 d  ef4 r \tuplet 3/2 {f g af} g2 f4. ( ef8 ) |
-  ef2. r4 ef2 f ef2. \tuplet 3/2 { r8 f ef } |
+  ef2. r4 ef2 d ef2. \tuplet 3/2 { r8 f ef } |
   ef2 ef ef8 ( d4.~ d4 ) \tuplet 3/2 { r8 r bf } c2 d |
   ef4 r \tuplet 3/2 { c ef ef } ef2 d bf2. r4 |
 %19
@@ -98,11 +105,11 @@ f2 ( g ) a1~ a R1 \bar "|."
 
 }
 
-bass = \relative c {
+baritone = \relative c {
   \global
-  R1*2 ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
+ ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
   c2 d  ef4 r \tuplet 3/2 {f g af} g2 f4. ( ef8 ) |
-g2. r4 R1 R1 R1 r2. \tuplet 3/2 { r8 r bf } af2 f |
+g2. r4 ef2 bf'c ( bf4 ) \tuplet 3/2 { r8 bf bf } c2 bf bf2. \tuplet 3/2 { r8 r bf } af2 f |
   g4 r \tuplet 3/2 { f g af } g2f ef2. r4 |
   %19
   g8 g~ \tuplet 3/2 { g f f  } fs2 g8 g~ \tuplet 3/2 { g f f  } fs2 g8 g~ \tuplet 3/2 { g f f  } fs4 ( d ) |
@@ -119,7 +126,37 @@ bf2 g a4 r \tuplet 3/2 { g a bf } a2 ( c ) bf2 ( c ) c1~ c R1 \bar "||"
 }
 
 verse = \lyricmode {
-  % Lyrics follow here.
+
+Wise men say
+On -- ly fools rush in
+But I can't help fall -- ing in love with you
+Shall I stay?
+Would it be a sin?
+If I can't help fall -- ing in love with you
+
+% [Chorus]
+Like a riv -- er flows
+Sure -- ly to the sea
+Dar -- ling, so it goes
+Some things are meant to be
+
+% [Verse 2]
+Take my hand
+Take my whole life too
+For I can't help fall -- ing in love with you
+For I can't help fall -- ing in love with you
+
+% [Chorus]
+Like a riv -- er flows
+Sure -- ly to the sea
+Dar -- ling, so it goes
+Some things are meant to be, to be
+
+%[Verse 3]
+Take my hand
+Take my whole life, too
+For I can't help fall -- ing in love with you
+For I can't help fall -- ing in love with you
 
 }
 
@@ -173,9 +210,11 @@ choirPart = \new ChoirStaff <<
     midiInstrument = "choir aahs"
     instrumentName = "Lead"
   } \new Voice = "lead" \lead
+  %{
   \new Lyrics \with {
     \override VerticalAxisGroup #'staff-affinity = #CENTER
   } \lyricsto "lead" \verse
+  %}
   \new Staff \with {
     midiInstrument = "choir aahs"
     instrumentName = "Baritone"
