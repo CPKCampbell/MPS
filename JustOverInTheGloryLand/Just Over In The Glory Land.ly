@@ -9,7 +9,7 @@
   tagline = ""
 }
 
-%#(set-global-staff-size = 16)
+#(set-global-staff-size  20)
 
 \paper {
   #(set-paper-size "letter")
@@ -36,21 +36,20 @@ global = {
   \autoBeamOff
 }
 
-tenor = \relative c {
+lead = \relative c {
   \global
   d8. e16 g4 4 4 d8. e16 g4 e d d e8 g a g b4 a |
-  a2. d,8. e16 g4 g g d8. e16 g4 e d d\mark \markup{ "Segno" } e8 g a g b4 a g2. \mark \markup { "fine" } \bar "" \break
+  a2. d,8. e16 g4 g g d8. e16 g4 e d d e8 g a g b4 a g2.  \bar "" \break
   d4 b'2~ b8. a16 g8. a16 b4 a g g g2~ g8. fs16 g8. a16 g4 e d d e8 g a g b4 a
-  a2. d,4 b'2~ b8. a16 g8. a16 b4 a g g g2~ g8. fs16 g8. a16 g4 e d\mark \markup { "D.S. al fine" }
-   \bar "|."
+  a2. d,4 b'2~ b8. a16 g8. a16 b4 a g g g2~ g8. fs16 g8. a16 g4 e d d e8 g a g b4 a  g2.
 }
 
-lead = \relative c' {
+tenor = \relative c' {
   \global
   b8. b16 b4 c b b8. c16 e4 c b b b8 d e d cs4 cs |
   d2. b8. b16 b4 c b b8. c16 e4 c b b  c8 e e e d4 c b2. b4 |
 d2~ d8. d16 d8. d16 d4 c b d e2~ e8. ds16 e8. e16 e4 c b b b8 d e e cs4 cs |
-d2. d4 d2~ d8. d16 d8. d16  e4 c b d e2~e8. ds16 e8. e16e4 c b \bar "|."
+d2. d4 d2~ d8. d16 d8. d16  e4 c b d e2~e8. ds16 e8. e16 e4 c b b  c8 e e e d4 c b2. \bar "|."
 }
 
 baritone = \relative c' {
@@ -59,7 +58,7 @@ baritone = \relative c' {
  fs2. g8. g16 d4 e d g8. g16 g4 g g g g8 g g g g4 fs d2.\bar "||" g4
 %refrain
 g4 g g8. fs16 g8. fs16 g4 fs g g c c c8. c16 c8. c16 c4 g g g g8 g g g g (fs) e (g) |
-fs2. fs4 g g g8. fs16 g8. fs16 g4 fs g g c c c8. c16 c8. c16  c4 g g
+fs2. fs4 g g g8. fs16 g8. fs16 g4 fs g g c c c8. c16 c8. c16  c4 g g  g g8 g g g g4 fs d2.
 \bar "|."
 }
 
@@ -68,7 +67,7 @@ bass = \relative c {
   g8. g16 g4 g g g8. g16 c8 ( d) e ( fs) g4 g e8 b c b a4 a |
   d2. gs,8. g16 g4 g g g8. g16 c8 (d) e (fs) g4 g e8 b c cs d4 d g,2. g4 |
   g4 g g8. a16 b8. d16 g4 d e b c c c8. c16 c8. c16 c8 (d) e (fs) g4 g e8 b c b a4 a |
-  d2. d4 g,g g8. a16 b8. d16 g4 d e b c c c8. c16 c8. c16 c8 (d) e (fs) g4
+  d2. d4 g,g g8. a16 b8. d16 g4 d e b c c c8. c16 c8. c16 c8 (d) e (fs) g4 g e8 b c cs d4 d g,2.
 }
 
 verseOne = \lyricmode {
@@ -105,7 +104,8 @@ refrain = \lyricmode {
   I'll join the hap -- py an -- gel band,
   Just o -- ver in the glo -- ry land;
   Just o -- ver in the glo -- ry land,
-  There with the might -- y host I'll stand.
+  There with the might -- y host I'll stand,
+  Just o -- ver in the glo -- ry land.
 }
 
 brefrain = \lyricmode {
@@ -145,8 +145,8 @@ rehearsalMidi = #
       instrumentName = \markup \center-column { "Tenor" "Lead" }
          } <<
       \clef "treble_8"
-      \new Voice = "tenor" { \voiceOne \lead }
-      \new Voice = "lead" { \voiceTwo \tenor }
+      \new Voice = "tenor" { \voiceOne \tenor }
+      \new Voice = "lead" { \voiceTwo \lead }
     >>
    \new Lyrics  \lyricsto "tenor" \verseOne
     \new Lyrics  \lyricsto "tenor" { \verseTwo \refrain }
