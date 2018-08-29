@@ -58,8 +58,8 @@ lead = \relative c {
 tenor = \relative c {
   \global
   \clef "treble_8"
- ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
-  c2 d  ef4 r \tuplet 3/2 {f g af} g2 f4. ( ef8 ) |
+ ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf } |
+  af2 bf  g4 r \tuplet 3/2 {af bf c } bf2 bf4. ( af8 ) |
   g2. r4 ef'2 d c2 ( bf4 ) \tuplet 3/2 { r8 bf bf } |
   c2 bf bf2. \tuplet 3/2 { r8 r bf } af2 bf |
   c4 r \tuplet 3/2 { af bf c  } bf2 bf g2. r4 |
@@ -107,8 +107,8 @@ f2 ( g ) a1~ a R1 \bar "|."
 
 baritone = \relative c {
   \global
- ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf, } |
-  c2 d  ef4 r \tuplet 3/2 {f g af} g2 f4. ( ef8 ) |
+ ef2 bf' ef,2. \tuplet 3/2 {r8 f g} af2 g f2. \tuplet 3/2 {r8 r bf } |
+  af2 bf  g4 r \tuplet 3/2 {af bf c } bf2 bf4. ( af8 ) |
 g2. r4 ef2 bf'c ( bf4 ) \tuplet 3/2 { r8 bf bf } c2 bf bf2. \tuplet 3/2 { r8 r bf } af2 f |
   g4 r \tuplet 3/2 { f g af } g2f ef2. r4 |
   %19
