@@ -33,7 +33,7 @@
 global = {
   \key c \major
   \time 4/4
-  \partial 4
+ % \partial 4
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = 1,1,1,1
@@ -43,7 +43,7 @@ global = {
 lead = \relative c {
   \global
   \clef "treble_8"
-  e4\p e2 g4 e8 g c4 ( b ) c4. c8 |
+ e2. e4\p e2 g4 e8 g c4 ( b ) c4. c8 |
   c4 g8 g a8. gs16 a8 a b4 ( a ) b r r8 a8 a a a4 r |
   r8 b8 c b c g a ( b ) c4 e e8. c16 g8 e g4 ( f ) e e8 a |
   a2~ a8 g e g c4. c8 c4 c r r8 c8\p bf4. bf8 |
@@ -60,7 +60,7 @@ lead = \relative c {
 tenor = \relative c' {
   \global
    \clef "treble_8"
-  c4 c2 c4 c8 e f2 g4. e8 |
+ c2. c4 c2 c4 c8 e f2 g4. e8 |
   e4 c8 e e8. e16 e8 e d2 d4 r r8 cs8 cs cs d4 r |
   r8 d d d c g' g( f ) e( c ) c4 c8. c16 c8 c e4( d ) c r |
   r4 c8 d e e r4 r a,8 c f4 c r r8 f8\p e4. e8 |
@@ -75,7 +75,7 @@ tenor = \relative c' {
 
 baritone = \relative c' {
   \global
-  g4\p g2 e4 c8 c d4( f ) e4. g8 |
+g2.  g4\p g2 e4 c8 c d4( f ) e4. g8 |
   g4 e8 g c8. b16 a8 e g4( fs ) g r r8 e8 f e a4 r |
   r8 g8 a g c r r g g( e ) g c c8. c16 c8 c c4( b ) c r |
   r4 f,8 f e e r4 r f8 g f4 a r r8 a\p g4. g8 |
@@ -88,7 +88,7 @@ baritone = \relative c' {
 
 bass = \relative c {
   \global
- c4\p c2 c4 c8 c d4( f ) e4.  g8 |
+c2. c4\p c2 c4 c8 c d4( f ) e4.  g8 |
  c,4 c8 c a8. b16 c8 c d2 g8 g g g g2( f8 ) f f f |
  f2( e8 ) e d4 c8( c' ) g( e ) c8. g'16 g8 g g4( gs ) a r |
  r4 a8 b c c r4 r c8 bf a4 f r4 r8 c8\p c4. c8 |
@@ -99,6 +99,7 @@ bass = \relative c {
 }
 
 verse = \lyricmode {
+  \skip  1  
   The Lord bless you and keep you
   The Lord lift His coun -- ten -- ance up -- on you,
   and give you peace, and give you peace.
@@ -111,6 +112,7 @@ verse = \lyricmode {
 }
 
 verseTen = \lyricmode {
+  \skip  1  
   The Lord bless you and keep you
   The Lord lift His coun -- ten -- ance up -- on you,
   and give you peace, and give you peace.
@@ -123,6 +125,7 @@ verseTen = \lyricmode {
 }
 
 verseBa = \lyricmode {
+  \skip  1  
   The Lord bless you and keep you
   The Lord lift His coun -- ten -- ance up -- on you,
   and give you peace, and give you peace.
@@ -135,6 +138,7 @@ verseBa = \lyricmode {
 }
 
 verseBs = \lyricmode {
+    \skip  1  
   The Lord bless you and keep you
   The Lord lift His coun -- ten -- ance up -- on you,
   and give you peace, and give you peace.
