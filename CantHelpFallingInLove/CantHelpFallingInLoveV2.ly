@@ -136,7 +136,7 @@ If I can't help fall -- ing in love with you
 
 % [Chorus]
 Like a riv -- er flows
-Sure -- ly to the sea
+On -- ly to the sea
 Dar -- ling, so it goes
 Some things are meant to be
 
@@ -148,7 +148,7 @@ For I can't help fall -- ing in love with you
 
 % [Chorus]
 Like a riv -- er flows
-Sure -- ly to the sea
+On -- ly to the sea
 Dar -- ling, so it goes
 Some things are meant to be, to be
 
